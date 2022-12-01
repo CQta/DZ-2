@@ -1,12 +1,13 @@
-﻿void pow(double a, double b) 
+﻿void Fnd_summ(int a) 
 {
-    double p = 0;
-    p = Math.Pow(a, b);
-    System.Console.WriteLine("a в степени b = ", p);
+    int sum = 0;
+    for(;a != 0;a /= 10)
+    {
+        sum = sum + (a %10);
+    }
+    System.Console.WriteLine(sum);
 }
-System.Console.WriteLine("Введите кеш");
-double a = double.Parse(Console.ReadLine());
-System.Console.WriteLine("Введите годовой процент");
-double b = double.Parse(Console.ReadLine());
-pow(a, b);
+System.Console.WriteLine("Введите число");
+int a = int.Parse(Console.ReadLine());
+Fnd_summ(a);
 
