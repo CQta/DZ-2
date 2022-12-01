@@ -1,13 +1,17 @@
-﻿void Fnd_summ(int a) 
+﻿void Get_and_Print_Array() 
 {
-    int sum = 0;
-    for(;a != 0;a /= 10)
+   
+    int[] array = new int[8];
+    for(int i = 0;i<8;i++)
     {
-        sum = sum + (a %10);
+        System.Console.WriteLine("Введите "+ i + "-ое число");
+        array[i] = int.Parse(Console.ReadLine());
     }
-    System.Console.WriteLine(sum);
+    for(int i = 0;i<8;i++)
+    {
+        System.Console.Write(array[i] + " ");
+    }
+   
 }
-System.Console.WriteLine("Введите число");
-int a = int.Parse(Console.ReadLine());
-Fnd_summ(a);
+Get_and_Print_Array();
 
